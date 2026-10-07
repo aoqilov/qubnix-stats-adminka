@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="28 22.5 192 192" width="192" height="192" role="img" aria-label="Qubnix">
+  <defs>
+    <radialGradient id="qx-ringBase" gradientUnits="userSpaceOnUse" cx="136" cy="30" r="175">
+      <stop offset="0" stop-color="#a28df8"/>
+      <stop offset=".07" stop-color="#9c86f5"/>
+      <stop offset=".32" stop-color="#7b68e4"/>
+      <stop offset=".43" stop-color="#6755db"/>
+      <stop offset=".6" stop-color="#5b4ad6"/>
+      <stop offset=".87" stop-color="#5546d4"/>
+      <stop offset="1" stop-color="#4b3ec8"/>
+    </radialGradient>
+    <radialGradient id="qx-fold" gradientUnits="userSpaceOnUse" cx="99.9" cy="151.3" r="77.3">
+      <stop offset=".741" stop-color="#3f34bd" stop-opacity="0"/>
+      <stop offset=".909" stop-color="#4237bf" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#3d32bb" stop-opacity=".95"/>
+    </radialGradient>
+    <radialGradient id="qx-inner" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1">
+      <stop offset="0" stop-color="#3a30b8" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#3a30b8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="qx-tip" gradientUnits="userSpaceOnUse" cx="141" cy="203" r="52">
+      <stop offset="0" stop-color="#a490fa" stop-opacity=".95"/>
+      <stop offset=".55" stop-color="#9580f3" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#8f7af0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="qx-check" gradientUnits="userSpaceOnUse" gradientTransform="rotate(-45)" x1="200" y1="128" x2="160" y2="196">
+      <stop offset="0" stop-color="#9884f6"/>
+      <stop offset=".5" stop-color="#7562e3"/>
+      <stop offset="1" stop-color="#5745d3"/>
+    </linearGradient>
+    <linearGradient id="qx-foldFade" gradientUnits="userSpaceOnUse" x1="0" y1="96" x2="0" y2="124">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <clipPath id="qx-ringClip">
+      <path d="M106.9 201.5C103.8 201.4 100.1 201 97.8 200.6C96.9 200.4 95.5 200.1 94.7 200C87.6 198.8 78.1 195.4 72.4 192.1C71.5 191.6 70.5 191 70.2 190.8C68.5 190 62.4 185.4 59.6 183C56.4 180.2 52.3 175.9 50 172.9C47.4 169.7 46.9 168.9 45.1 166.3C40.1 158.7 37 151.9 34.7 143C34 140.4 33.7 138.8 33 134.8C31.7 127.5 31.9 118.6 33.3 110.6C33.5 109.4 33.8 108.1 33.8 107.8C34.1 105.9 36 98.9 37.1 95.6C38.7 90.9 42 83.5 43.5 81.2C43.8 80.8 44.4 79.7 44.9 78.9C47 75 51.2 69.3 54.2 65.9C62.8 56.3 71.8 49.4 82.8 44.1C87.4 41.8 88.8 41.3 96.5 38.8C97.4 38.5 99.7 37.9 101.5 37.6C105.2 36.8 107.7 36.4 114.4 35.7C118 35.4 126.4 35.6 130.9 36.3C131.9 36.4 133.5 36.6 134.5 36.7C138.5 37.3 143 38.2 145.6 39.1C146.3 39.3 147.6 39.7 148.5 39.9C156.9 42.3 167.1 47.5 173.8 52.7C176.8 55.1 177.1 55.3 178.9 57.1C184.4 62.2 187.6 65.9 191.3 71.4C195.8 78.1 199.2 85.4 201.2 92.4C201.4 93.3 201.7 94.4 201.9 95C202.2 96.1 203 100.2 203.2 101.9C204.6 113 203.3 116.1 196.7 117.2C192.6 118 193.4 117.4 177.6 132.6C172.4 137.7 171.8 138.2 170.1 138.8C167.1 139.8 163.8 138.5 162.1 135.8C161.1 134.1 160.8 131.9 161.3 129C162.4 123.3 162.7 119.7 162.7 115.7C162.8 97.7 152.5 82.2 136.3 75.5C131.7 73.7 127.7 72.9 123.2 73.1C114.9 73.5 106.7 75.8 100.3 79.7C86.9 87.6 77.6 100.7 75 115C73.7 122.3 73.9 126.1 75.9 132.8C79.5 144.9 88.2 154.1 100.5 159C102.1 159.7 103.7 160.2 104.4 160.4C106.8 160.9 108.9 161.5 109.5 161.8C110 162.1 112.2 164.3 117.4 169.5C121.4 173.5 127.7 179.8 131.4 183.5C138.9 191.1 138.8 190.9 138.7 192.6C138.5 195.9 135.4 197.6 124.3 200C122.2 200.4 121.5 200.6 119.8 200.7C119.1 200.8 118 201 117.3 201.1C115 201.6 111.4 201.7 106.9 201.5Z"/>
+    </clipPath>
+    <mask id="qx-foldRegion" maskUnits="userSpaceOnUse" x="0" y="0" width="221" height="232">
+      <rect width="109" height="232" fill="url(#qx-foldFade)"/>
+    </mask>
+    <!-- Animatsiyadagi "draw-on" masklarning to'liq chizilgan holati — oxirgi kadr bilan aynan bir xil kesim -->
+    <mask id="qx-ringDraw" maskUnits="userSpaceOnUse" x="0" y="0" width="221" height="232">
+      <path d="M164.35 140.52A48 48 0 0 0 88.69 85.05A48 48 0 0 0 134.53 166.90" fill="none" stroke="#fff" stroke-width="96"/>
+    </mask>
+    <mask id="qx-checkDraw" maskUnits="userSpaceOnUse" x="0" y="0" width="221" height="232">
+      <path d="M122.58 139.05L162.71 179.18L208.28 133.61" fill="none" stroke="#fff" stroke-width="44" stroke-linejoin="miter"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#qx-ringDraw)">
+    <path d="M106.9 201.5C103.8 201.4 100.1 201 97.8 200.6C96.9 200.4 95.5 200.1 94.7 200C87.6 198.8 78.1 195.4 72.4 192.1C71.5 191.6 70.5 191 70.2 190.8C68.5 190 62.4 185.4 59.6 183C56.4 180.2 52.3 175.9 50 172.9C47.4 169.7 46.9 168.9 45.1 166.3C40.1 158.7 37 151.9 34.7 143C34 140.4 33.7 138.8 33 134.8C31.7 127.5 31.9 118.6 33.3 110.6C33.5 109.4 33.8 108.1 33.8 107.8C34.1 105.9 36 98.9 37.1 95.6C38.7 90.9 42 83.5 43.5 81.2C43.8 80.8 44.4 79.7 44.9 78.9C47 75 51.2 69.3 54.2 65.9C62.8 56.3 71.8 49.4 82.8 44.1C87.4 41.8 88.8 41.3 96.5 38.8C97.4 38.5 99.7 37.9 101.5 37.6C105.2 36.8 107.7 36.4 114.4 35.7C118 35.4 126.4 35.6 130.9 36.3C131.9 36.4 133.5 36.6 134.5 36.7C138.5 37.3 143 38.2 145.6 39.1C146.3 39.3 147.6 39.7 148.5 39.9C156.9 42.3 167.1 47.5 173.8 52.7C176.8 55.1 177.1 55.3 178.9 57.1C184.4 62.2 187.6 65.9 191.3 71.4C195.8 78.1 199.2 85.4 201.2 92.4C201.4 93.3 201.7 94.4 201.9 95C202.2 96.1 203 100.2 203.2 101.9C204.6 113 203.3 116.1 196.7 117.2C192.6 118 193.4 117.4 177.6 132.6C172.4 137.7 171.8 138.2 170.1 138.8C167.1 139.8 163.8 138.5 162.1 135.8C161.1 134.1 160.8 131.9 161.3 129C162.4 123.3 162.7 119.7 162.7 115.7C162.8 97.7 152.5 82.2 136.3 75.5C131.7 73.7 127.7 72.9 123.2 73.1C114.9 73.5 106.7 75.8 100.3 79.7C86.9 87.6 77.6 100.7 75 115C73.7 122.3 73.9 126.1 75.9 132.8C79.5 144.9 88.2 154.1 100.5 159C102.1 159.7 103.7 160.2 104.4 160.4C106.8 160.9 108.9 161.5 109.5 161.8C110 162.1 112.2 164.3 117.4 169.5C121.4 173.5 127.7 179.8 131.4 183.5C138.9 191.1 138.8 190.9 138.7 192.6C138.5 195.9 135.4 197.6 124.3 200C122.2 200.4 121.5 200.6 119.8 200.7C119.1 200.8 118 201 117.3 201.1C115 201.6 111.4 201.7 106.9 201.5Z" fill="url(#qx-ringBase)"/>
+    <g clip-path="url(#qx-ringClip)">
+      <g mask="url(#qx-foldRegion)">
+        <circle cx="99.9" cy="151.3" r="77.3" fill="url(#qx-fold)"/>
+      </g>
+      <ellipse cx="0" cy="0" rx="1" ry="1" fill="url(#qx-inner)" transform="translate(79 150) rotate(28) scale(12 27)"/>
+      <circle cx="141" cy="203" r="52" fill="url(#qx-tip)"/>
+    </g>
+  </g>
+  <g mask="url(#qx-checkDraw)">
+    <g transform="rotate(45)" fill="url(#qx-check)">
+      <rect x="189" y="-2.6" width="67" height="28.5" rx="5.5"/>
+      <rect x="227.5" y="-48.8" width="28.5" height="74.7" rx="5.5"/>
+    </g>
+  </g>
+</svg>

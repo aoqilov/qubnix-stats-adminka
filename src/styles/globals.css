@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   QUBNIX TOKENS — Figma "Qubnix Redesign" variables'dan generatsiya
+   Uch qatlam:  primitives → semantic → legacy alias
+   Komponent ichida HECH QACHON hex yozilmaydi.
+   ============================================================ */
+
+/* ---------- 1. PRIMITIVES (Color Primitives collection) ----------
+   Xom qiymatlar. Faqat 2-3 bloklar shu yerga ishora qiladi;
+   komponent bu blokka hech qachon tegmaydi.                        */
+:root {
+  /* Neutral — light yuzalar va matn (slate oilasi) */
+  --c-neutral-50: #f8fafc;
+  --c-neutral-100: #f1f5f9;
+  --c-neutral-200: #e2e8f0;
+  --c-neutral-300: #cbd5e1;
+  --c-neutral-400: #94a3b8;
+  --c-neutral-500: #64748b;
+  --c-neutral-600: #475569;
+  --c-neutral-700: #334155;
+
+  /* Ink — dark tema yuzalari va matni (ko'k-kulrang oila).
+     Neutral'dan ALOHIDA ramp: dark rejimda slate juda sovuq chiqadi. */
+  --c-ink-100: #eaecf0;
+  --c-ink-300: #98a2b3;
+  --c-ink-700: #344054;
+  --c-ink-800: #1d2939;
+  --c-ink-900: #101828;
+  --c-ink-950: #0c111d;
+
+  --c-brand-50: #f1f0fe;
+  --c-brand-100: #e0defc;
+  --c-brand-200: #c7c3fa;
+  --c-brand-300: #a29cf5;
+  --c-brand-400: #7c74ed;
+  --c-brand-500: #5d53e3;
+  --c-brand-600: #4a3fcc;
+  --c-brand-700: #3b32a3;
+  --c-brand-800: #4a3d8c;
+  --c-brand-950: #1b1730;
+
+  --c-info-50: #eff8ff;
+  --c-info-200: #b3dfff;
+  --c-info-500: #0a84ff;
+  --c-info-700: #004999;
+  --c-info-900: #001a33;
+
+  --c-success-50: #effdf5;
+  --c-success-200: #a7f3d0;
+  --c-success-400: #34d399;
+  --c-success-500: #10b981;
+  --c-success-700: #047857;
+  --c-success-900: #052e1f;
+
+  --c-warning-50: #fef7cd;
+  --c-warning-200: #fbda61;
+  --c-warning-300: #fec84b;
+  --c-warning-500: #f79009;
+  --c-warning-700: #b54708;
+  --c-warning-900: #4e2a0b;
+
+  --c-danger-50: #ffedec;
+  --c-danger-200: #feb3ac;
+  --c-danger-300: #fda29b;
+  --c-danger-500: #f04438;
+  --c-danger-700: #b42318;
+  --c-danger-900: #55160c;
+
+  --c-teal-500: #14b8a6;
+  --c-orange-500: #fb6514;
+  --c-pink-500: #ee46bc;
+  --c-cyan-400: #22ccee;
+  --c-cyan-500: #06aed4;
+}
+
+/* ---------- 2. SEMANTIC — Light mode ----------
+   Token nomi VAZIFANI bildiradi, rangni emas. Yangi kod faqat shu
+   blokdagi (va 3-blokdagi dark juftligi) nomlarni ishlatadi.       */
+:root {
+  --bg-canvas: var(--c-neutral-50);
+  --bg-surface: var(--c-neutral-100);
+  --bg-surface-secondary: var(--c-neutral-200);
+  --bg-overlay: var(--c-neutral-700);
+
+  --text-primary: var(--c-neutral-700);
+  --text-secondary: var(--c-neutral-500);
+  --text-disabled: var(--c-neutral-300);
+  --text-inverse: var(--c-neutral-50);
+
+  --border-default: var(--c-neutral-300);
+  --border-subtle: var(--c-neutral-200);
+  --border-focus: var(--c-brand-500);
+
+  --brand-default: var(--c-brand-500);
+  --brand-hover: var(--c-brand-600);
+  --brand-pressed: var(--c-brand-700);
+  --brand-subtle-bg: var(--c-brand-50);
+
+  --status-success-text: var(--c-success-700);
+  --status-success-bg: var(--c-success-50);
+  --status-success-solid: var(--c-success-500);
+  --status-warning-text: var(--c-warning-700);
+  --status-warning-bg: var(--c-warning-50);
+  --status-warning-solid: var(--c-warning-500);
+  --status-error-text: var(--c-danger-700);
+  --status-error-bg: var(--c-danger-50);
+  --status-error-solid: var(--c-danger-500);
+  --status-info-text: var(--c-info-700);
+  --status-info-bg: var(--c-info-50);
+  --status-progress-text: var(--c-brand-700);
+  --status-progress-bg: var(--c-brand-50);
+
+  --accent-teal: var(--c-teal-500);
+  --accent-orange: var(--c-orange-500);
+  --accent-pink: var(--c-pink-500);
+  --accent-cyan: var(--c-cyan-500);
+
+  /* Workspace / avatar palitrasi — ID bo'yicha tanlanadi.
+     Qo'lda emas, utils/avatarColor.ts dagi avatarColorVar(id) orqali. */
+  --avatar-1: var(--accent-teal);
+  --avatar-2: var(--accent-orange);
+  --avatar-3: var(--accent-pink);
+  --avatar-4: var(--accent-cyan);
+  --avatar-5: var(--brand-default);
+  --avatar-6: var(--status-success-solid);
+
+  --overlay-backdrop: rgba(12, 17, 29, 0.55);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.1);
+  --shadow-dropdown: 0 8px 24px rgba(16, 24, 40, 0.12);
+  --shadow-modal: 0 24px 48px rgba(16, 24, 40, 0.18);
+
+  /* Brand fon ustidagi matn — ikkala temada ham och (inverse EMAS) */
+  --text-on-brand: var(--c-neutral-50);
+
+  /* Grafik rollari (faqat qubnix-admin) — qubnix primitivlariga havola, yangi rang yo'q.
+     dataviz validatori bilan tekshirilgan (sirt = --bg-surface), qarang:
+     components/shared/charts/chartTokens.ts. Kategorik — tartib qat'iy (CVD xavfsizligi). */
+  --chart-series-1: var(--c-brand-500);
+  --chart-series-2: var(--c-orange-500);
+  --chart-series-3: var(--c-info-500);
+  /* Ketma-ket shkala (heatmap): 1 — nolga yaqin (sirtga yaqin), 7 — eng ko'p. */
+  --chart-seq-1: var(--c-brand-100);
+  --chart-seq-2: var(--c-brand-200);
+  --chart-seq-3: var(--c-brand-300);
+  --chart-seq-4: var(--c-brand-400);
+  --chart-seq-5: var(--c-brand-500);
+  --chart-seq-6: var(--c-brand-600);
+  --chart-seq-7: var(--c-brand-700);
+}
+
+/* ---------- 3. SEMANTIC — Dark mode ----------
+   FAQAT qiymat o'zgaradi, nom o'sha-o'sha. Shuning uchun komponent
+   dark tema haqida hech narsa bilmaydi.                            */
+.dark {
+  --bg-canvas: var(--c-ink-950);
+  --bg-surface: var(--c-ink-900);
+  --bg-surface-secondary: var(--c-ink-800);
+  --bg-overlay: var(--c-ink-100);
+
+  --text-primary: var(--c-ink-100);
+  --text-secondary: var(--c-ink-300);
+  --text-disabled: var(--c-ink-700);
+  --text-inverse: var(--c-ink-950);
+
+  --border-default: var(--c-ink-700);
+  --border-subtle: var(--c-ink-800);
+  --border-focus: var(--c-brand-400);
+
+  --brand-default: var(--c-brand-400);
+  --brand-hover: var(--c-brand-500);
+  --brand-pressed: var(--c-brand-800);
+  --brand-subtle-bg: var(--c-brand-950);
+
+  --status-success-text: var(--c-success-200);
+  --status-success-bg: var(--c-success-900);
+  --status-success-solid: var(--c-success-400);
+  --status-warning-text: var(--c-warning-300);
+  --status-warning-bg: var(--c-warning-900);
+  --status-warning-solid: var(--c-warning-500);
+  --status-error-text: var(--c-danger-300);
+  --status-error-bg: var(--c-danger-900);
+  --status-error-solid: var(--c-danger-500);
+  --status-info-text: var(--c-info-200);
+  --status-info-bg: var(--c-info-900);
+  --status-progress-text: var(--c-brand-200);
+  --status-progress-bg: var(--c-brand-950);
+
+  --accent-cyan: var(--c-cyan-400);
+
+  /* Grafik rollari — dark diapazonga (OKLCH L 0.48–0.67) tushadigan qadamlar. */
+  --chart-series-1: var(--c-brand-400);
+  --chart-series-2: var(--c-warning-700);
+  --chart-series-3: var(--c-info-500);
+  /* Dark'da shkala teskari: nolga yaqin — qorong'i (sirtga yaqin), ko'p — yorqin. */
+  --chart-seq-1: var(--c-brand-950);
+  --chart-seq-2: var(--c-brand-700);
+  --chart-seq-3: var(--c-brand-600);
+  --chart-seq-4: var(--c-brand-500);
+  --chart-seq-5: var(--c-brand-400);
+  --chart-seq-6: var(--c-brand-300);
+  --chart-seq-7: var(--c-brand-200);
+
+  --overlay-backdrop: rgba(0, 0, 0, 0.65);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-dropdown: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-modal: 0 24px 48px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- 4. RADIUS (Figma: radius collection) ---------- */
+:root {
+  --radius-100: 4px;
+  --radius-200: 8px;
+  --radius-300: 12px;
+  --radius-400: 16px;
+  --radius-500: 24px;
+  --radius-full: 9999px;
+
+  --radius-input: var(--radius-200);
+  --radius-button: var(--radius-300);
+  --radius-card: var(--radius-300);
+  --radius-popover: var(--radius-400);
+  --radius-modal: var(--radius-500);
+  --radius-chip: var(--radius-full);
+  --radius-avatar: var(--radius-full);
+}
+
+/* ---------- 5. SPACING — Figma'da hali yo'q, 4px shkala taklifi ----------
+   Tailwind'ning standart shkalasi (p-1=4px, p-2=8px, ...) aynan shu
+   qiymatlar — shuning uchun tailwind.config.ts da takrorlanmagan.
+   Bu o'zgaruvchilar inline CSS / calc() uchun qoldirilgan.          */
+:root {
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+}
+
+/* ---------- 6. Z-INDEX ---------- */
+:root {
+  --z-sticky: 10;
+  --z-dropdown: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}
+
+/* ============================================================
+   7. ⛔ DEPRECATED — LEGACY ALIAS. YANGI KODDA ISHLATMANG.
+   ------------------------------------------------------------
+   Bu blok faqat ESKI Cus* komponentlar (ParkOps'dan ko'chirilgan)
+   sinmasligi uchun turibdi. Har bir komponent yangi token'larga
+   ko'chirilgach, uning nomi shu ro'yxatdan o'chiriladi.
+   Blok bo'shaganda butunlay yo'q qilinadi.
+
+   Yangi kod / yangi komponent / refactor qilinayotgan komponent
+   FAQAT 2-6 bo'limdagi token'larni ishlatadi:
+     --bg-*, --text-*, --border-*, --brand-*, --status-*,
+     --accent-*, --radius-*, --space-*, --z-*
+   ============================================================ */
+:root,
+.dark {
+  --bg-main: var(--bg-canvas);
+  --bg-second: var(--bg-surface);
+  --bg-hover: var(--bg-surface-secondary);
+  --bg-input: var(--bg-surface);
+  --bg-tooltip: var(--bg-overlay);
+
+  --border-2: var(--border-default);
+  --border-input: var(--border-default);
+
+  --text-default: var(--text-primary);
+  --text-2: var(--text-primary);
+  --text-3: var(--text-secondary);
+  --text-4: var(--text-secondary);
+  --text-muted: var(--text-secondary);
+  --text-dim: var(--text-disabled);
+
+  --vio: var(--brand-default);
+  --accent: var(--brand-default);
+  --accent-soft: var(--brand-subtle-bg);
+  --accent-border: var(--c-brand-200);
+  --vio-10: var(--brand-subtle-bg);
+
+  --color-blue: var(--c-info-500);
+  --focus-ring-blue: rgba(10, 132, 255, 0.19);
+
+  --color-red: var(--status-error-solid);
+  --color-red-text: var(--status-error-text);
+  --color-red-soft: var(--status-error-bg);
+  --color-red-border: var(--c-danger-200);
+  --focus-ring-red: rgba(240, 68, 56, 0.19);
+
+  --color-green: var(--status-success-solid);
+  --color-green-text: var(--status-success-text);
+  --color-green-soft: var(--status-success-bg);
+  --color-green-border: var(--c-success-200);
+
+  --overlay-hover: rgba(0, 0, 0, 0.35);
+  --text-on-accent: var(--text-on-brand);
+}
+
+/* ---------- 8. Shrift kattaligi (ui.store.ts → setFontSize) ---------- */
+:root {
+  --font-scale: 1;
+}
+html[data-font-size="sm"] {
+  --font-scale: 0.9;
+}
+html[data-font-size="lg"] {
+  --font-scale: 1.15;
+}
+
+/* ---------- 9. Base ---------- */
+body {
+  margin: 0;
+  font-family: "Barlow", system-ui, sans-serif;
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--brand-default);
+}
+a:hover {
+  color: var(--brand-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--brand-subtle-bg);
+  color: var(--text-primary);
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* iOS Safari/WebView: font-size 16px'dan kichik input'ga fokus qilinganda
+   sahifani avtomatik zoom qiladi. Mobil layout chegarasida (useLayoutMode
+   bilan bir xil 768px) native form elementlarni 16px'ga majburlaymiz —
+   faqat vizual o'lcham, dizayndagi padding/height o'zgarmaydi. */
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
